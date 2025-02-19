@@ -19,7 +19,15 @@ START = "2015-01-01"
 TODAY = date.today().strftime("%Y-%m-%d")
 from alpha_vantage.timeseries import TimeSeries
  # Replace with your Alpha Vantage API key
-API_KEY = st.secrets["ALPHA_VANTAGE_API_KEY"]
+
+
+if "ALPHA_VANTAGE_API_KEY" in st.secrets:
+    API_KEY = st.secrets["ALPHA_VANTAGE_API_KEY"]
+else:
+    st.error("API Key is missing! Make sure you added it in Streamlit Secrets.")
+    API_KEY = None  # Handle missing API key gracefully
+
+# API_KEY = st.secrets["ALPHA_VANTAGE_API_KEY"]
 st.title("Stock Prediction App")
 stocks = ("AAPL", "GOOG", "MSFT", "GME", "TSLA")
 selected_stock = st.selectbox("Select dataset for the prediction", stocks)
