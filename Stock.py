@@ -17,8 +17,9 @@ except ModuleNotFoundError:
 
 START = "2015-01-01"
 TODAY = date.today().strftime("%Y-%m-%d")
-API_KEY = "OQSK2432KISQ9B2V"  # Replace with your Alpha Vantage API key
-
+from alpha_vantage.timeseries import TimeSeries
+ # Replace with your Alpha Vantage API key
+API_KEY = st.secrets["ALPHA_VANTAGE_API_KEY"]
 st.title("Stock Prediction App")
 stocks = ("AAPL", "GOOG", "MSFT", "GME", "TSLA")
 selected_stock = st.selectbox("Select dataset for the prediction", stocks)
