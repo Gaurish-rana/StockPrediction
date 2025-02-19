@@ -21,13 +21,13 @@ from alpha_vantage.timeseries import TimeSeries
  # Replace with your Alpha Vantage API key
 
 
-if "ALPHA_VANTAGE_API_KEY" in st.secrets:
-    API_KEY = st.secrets["ALPHA_VANTAGE_API_KEY"]
-else:
-    st.error("API Key is missing! Make sure you added it in Streamlit Secrets.")
-    API_KEY = None  # Handle missing API key gracefully
+# if "ALPHA_VANTAGE_API_KEY" in st.secrets:
+#     API_KEY = st.secrets["ALPHA_VANTAGE_API_KEY"]
+# else:
+#     st.error("API Key is missing! Make sure you added it in Streamlit Secrets.")
+#     API_KEY = None  # Handle missing API key gracefully
 
-# API_KEY = st.secrets["ALPHA_VANTAGE_API_KEY"]
+API_KEY = "OQSK2432KISQ9B2V"
 st.title("Stock Prediction App")
 stocks = ("AAPL", "GOOG", "MSFT", "GME", "TSLA")
 selected_stock = st.selectbox("Select dataset for the prediction", stocks)
