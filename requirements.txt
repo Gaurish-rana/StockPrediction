@@ -1,2 +1,5 @@
 streamlit
+pandas
 prophet
+plotly
+alpha_vantage

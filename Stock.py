@@ -5,6 +5,15 @@ from prophet import Prophet
 from prophet.plot import plot_plotly
 from plotly import graph_objs as go
 from alpha_vantage.timeseries import TimeSeries
+import os
+import subprocess
+
+try:
+    from prophet import Prophet
+except ModuleNotFoundError:
+    subprocess.run(["pip", "install", "prophet"])
+    from prophet import Prophet  # Try again after installation
+
 
 START = "2015-01-01"
 TODAY = date.today().strftime("%Y-%m-%d")
