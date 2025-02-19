@@ -17,7 +17,7 @@ except ModuleNotFoundError:
 
 START = "2015-01-01"
 TODAY = date.today().strftime("%Y-%m-%d")
-API_KEY = "YOUR_ALPHA_VANTAGE_API_KEY"  # Replace with your Alpha Vantage API key
+API_KEY = "OQSK2432KISQ9B2V"  # Replace with your Alpha Vantage API key
 
 st.title("Stock Prediction App")
 stocks = ("AAPL", "GOOG", "MSFT", "GME", "TSLA")
