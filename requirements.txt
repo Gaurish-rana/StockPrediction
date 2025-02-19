@@ -1,3 +1,2 @@
 streamlit
 prophet
-fbprophet
